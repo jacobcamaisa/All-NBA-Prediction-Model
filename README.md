@@ -207,13 +207,6 @@ There were not any false positives from the center model’s predictions.
 Some limitations of our model is that it does not take into account a player’s team statistic like their win loss rate. In a real life scenario, if two players had similar stats, the player on the better team would get picked over the player on the worse team. However, this does somewhat reflect the subjectivity of the panel of judges. Team popularity and exposure does impact how judges may view players. Our model is also at the mercy of what the data lists different player positions as. As seen with Lebron James who one season was listed as a point guard, but the next as a center, when he usually is seen as a forward, the model can miss All-NBA players because it places players into a restrictive box based on their listed position. 
 
 Finally, according to our model’s predictions, these are the players who will make the 2023 All-NBA team.  When comparing our results from those of an Bleacher Report article, it is interesting to see that already some of our predictions are in line with what NBA fans are predicting (Favale, n.d.). However, only time will tell. 
-Guards
-
-
-Front Court
-
-
-Centers
 
 <ins>References</ins>
 
