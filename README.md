@@ -1,4 +1,6 @@
-## Using a Keras Sequential Network to Predict All-NBA Teams
+# Using a Keras Sequential Network to Predict All-NBA Teams
+
+### To see main project code go to all_nba_project_code
 
 
 <img width="1000" alt="Screen Shot 2023-04-04 at 3 59 35 PM" src="https://user-images.githubusercontent.com/97067377/229940523-06876c21-6184-4391-8951-5296dd295c32.png">
