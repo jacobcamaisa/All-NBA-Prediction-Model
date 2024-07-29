@@ -55,160 +55,36 @@ After running the guard model, the final validation loss was 0.124 and the final
 
 The model predicted **301 out of 306** guards correctly in the test data, meaning it had 98% accuracy. 
 
-<img width="329" alt="Screen Shot 2023-04-03 at 9 34 39 PM" src="https://user-images.githubusercontent.com/97067377/229687922-7d5aba43-a541-44f0-935e-096d6cc88eed.png">
 
-***Image of model predictions across all guards in test data. Blue are correct predictions, each white line is a wrong prediction***
-
-<img width="580" alt="Screen Shot 2023-04-03 at 9 35 07 PM" src="https://user-images.githubusercontent.com/97067377/229687978-666b381f-32d1-4577-a998-26a5035c121b.png">
-
-***Players the guard model predicted incorrectly***
-
-It seemed unusual that 2020/2021 LeBron James had such a low prediction score considering that he is always one of the best players in the NBA. Upon closer inspection, LeBron was put as a point guard in the 2020/2021 season data, when he is usually a forward. This supports our belief that the model weighs statistics differently depending on position and that real All-NBA team voting is at the mercy of judge subjectivity. According to our model, James is not the best guard, but we all know he is one of the best players in the league.
-
-<img width="688" alt="Screen Shot 2023-04-03 at 9 36 18 PM" src="https://user-images.githubusercontent.com/97067377/229688134-5e82a779-b7b6-4bb9-a02c-2be69689a019.png">
-
-***Lebron James’ data for the 2020/2021 Season (note he is listed as PG)***
-
-The guard model predicted **11 out of 13** actual All-NBA team players, meaning it had an 85% accuracy. 
-I suspect the extra guard (13 players instead of 12) was because LeBron was listed as a point guard.
+The guard model predicted **11 out of 13** actual All-NBA team guards, meaning it had an 85% accuracy. 
 
 
-<img width="296" alt="Screen Shot 2023-04-03 at 9 38 33 PM" src="https://user-images.githubusercontent.com/97067377/229688388-01675323-e6da-4037-ac28-92f3dd0e6c47.png">
-
-***Image of model predictions for players who actually made the All-NBA team. Blue are correct predictions, each white line is a wrong prediction***
-
-
-<img width="429" alt="Screen Shot 2023-04-03 at 9 38 54 PM" src="https://user-images.githubusercontent.com/97067377/229688426-954f60cc-f3c2-4e57-a532-40b028f3b7b1.png">
-
-***Players that made an All-NBA team in real life***
-
-To investigate why some players who actually didn’t make an All-NBA team were chosen over players who did actually make an All-NBA team, I looked into the differences between average statistics between our model’s false positives and false negatives. From the images below we can see that the false positives (players who the model predicted to be All-NBA players but weren’t) played, on average, more games, and had a higher average assist percentage than the false negatives (real life All-NBA players the model missed). From this, the inference that games played and assist percentage were weighed more heavily in the guard model.
-
-<img width="756" alt="Screen Shot 2023-04-03 at 9 39 22 PM" src="https://user-images.githubusercontent.com/97067377/229688471-88bb46d3-c4ef-40c5-9edc-e105f82b268f.png">
-
-  
 
 
 <ins>**Front Court Model**</ins>
 
-After running the front court model, the final validation loss was 0.0764 and the final validation accuracy was 0.965 after convergence at 15 epochs. The highest 12 prediction scores were classified as making an All-NBA team. 
+After running the front court model, the final validation loss was 0.0632 and the final validation accuracy was 0.965 after convergence at 15 epochs. The highest 12 prediction scores were classified as making an All-NBA team. 
 
 
+The model predicted **254 out of 258** front court players correctly in the test data, meaning it had 98% accuracy. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-The model predicted 254 out of 258 front court players correctly in the test data, meaning it had 98% accuracy. 
-
-
-Image of model predictions for players who actually made the All-NBA team. Green are correct predictions, each white line is a wrong prediction
-
-
-
-
-
-
-
-
-Players the front court model predicted incorrectly
-
-
-
-
-
-The guard model predicted 8 out of 10 actual All-NBA team players, meaning it had an 85% accuracy.
-
-
-Image of model predictions for players who actually made the All-NBA team. Green are correct predictions, each white line is a wrong prediction
-
-
- 
-
-
-
-
-
-Players that made an All-NBA team in real life
-
-
-
-
-
-
-
-To investigate why some players who actually didn’t make an All-NBA team were chosen over players who did actually make an All-NBA team, I looked into the differences between average statistics between our model’s false positives and false negatives. From the images below we can see that the false positives (players who the model predicted to be All-NBA players but weren’t) played, on average, more games, and had a higher average assist percentage, usage percentage, and points per game than the false negatives (real life All-NBA players the model missed). From this, the inference that games played, assist percentage, usage percentage, and points per game were weighed more heavily in the front court model.
-
-
-
-
+The forwards model predicted 9 out of 10 actual All-NBA team forwards, meaning it had an 90% accuracy.
 
 
 <ins>**Center Model**</ins>
 
-After running the center model, the final validation loss was 0.1331 and the final validation accuracy was 0.9289 after convergence at 15 epochs. The highest 6 prediction scores were classified as making an All-NBA team. 
+After running the center model, the final validation loss was 0.205 and the final validation accuracy was 0.898 after convergence at 21 epochs. The highest 6 prediction scores were classified as making an All-NBA team. 
 
+The model predicted 134 out of 136 centers correctly in the test data, meaning it had 98.5% accuracy. 
 
+The center model predicted 6 out of 7 actual All-NBA team players, meaning it had an 86% accuracy.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-The model predicted 135 out of 136 centers correctly in the test data, meaning it had 99% accuracy. 
-
-
-Image of model predictions for players who actually made the All-NBA team. Red are correct predictions, each white line is a wrong prediction
-
-
-
-
-
-
-
-Only player the center model predicted incorrectly
-
-
-
-The guard model predicted 6 out of 7 actual All-NBA team players, meaning it had an 86% accuracy.
-
-
-Image of model predictions for players who actually made the All-NBA team. Red are correct predictions, each white line is a wrong prediction
-
-
-
-
-
-
-
-The only wrong prediction the center model made was missing Lebron James who did make an All-NBA team. I believe that this is again because Lebron is listed outside of his usual position of forward in the 2021/2022 season. This would explain why there were 7 centers on the All-NBA team from the test data instead of the expected 6.
-
-There were not any false positives from the center model’s predictions. 
 
 <ins>**Conclusion**</ins>
 
 Some limitations of our model is that it does not take into account a player’s team statistic like their win loss rate. In a real life scenario, if two players had similar stats, the player on the better team would get picked over the player on the worse team. However, this does somewhat reflect the subjectivity of the panel of judges. Team popularity and exposure does impact how judges may view players. Our model is also at the mercy of what the data lists different player positions as. As seen with Lebron James who one season was listed as a point guard, but the next as a center, when he usually is seen as a forward, the model can miss All-NBA players because it places players into a restrictive box based on their listed position. 
-
-Finally, according to our model’s predictions, these are the players who will make the 2023 All-NBA team.  When comparing our results from those of an Bleacher Report article, it is interesting to see that already some of our predictions are in line with what NBA fans are predicting (Favale, n.d.). However, only time will tell. 
+ 
 
 <ins>References</ins>
 
