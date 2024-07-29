@@ -45,7 +45,7 @@ After the first predictions were made, I noticed that many more guards were bein
 
 <ins>**Results**</ins>
 
-Note the test set is composed of data from the 2019/2020 and 2020/2021 season. “Ground Truth All-NBA Score” column is whether a player made an All-NBA team in real life (1  = yes, 0 = no). “pred score” column is the prediction score given to the player by the model. “predictions” column is whether or not the player is classified as an All-NBA team player by the model. “correct predictions” column is whether the “predictions” matches the “Ground Truth All-NBA Score”.
+Note the test set is composed of data from the 2020/2021 and 2021/2022 season. “Ground Truth All-NBA Score” column is whether a player made an All-NBA team in real life (1  = yes, 0 = no). “pred score” column is the prediction score given to the player by the model. “predictions” column is whether or not the player is classified as an All-NBA team player by the model. “correct predictions” column is whether the “predictions” matches the “Ground Truth All-NBA Score”.
 
 <ins>**Guard Model**</ins>
 
